@@ -150,7 +150,7 @@ public class Matrix implements Serializable {
 			return null;
 		}
 		
-		Matrix result = new Matrix(rows,columns);
+		Matrix result = new Matrix(this.rows,other.columns);
 		
 		for(int i = 0; i < this.rows; i++){
 			for(int j = 0; j < other.columns; j++){
