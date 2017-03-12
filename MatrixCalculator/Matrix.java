@@ -1,9 +1,8 @@
-package chapter3;
 import java.text.DecimalFormat;
 import java.util.*;
 import java.io.*;
 
-public class Matrix {
+public class Matrix implements Serializable {
 	public double[][] MatrixValues;
 	int rows;
 	int columns;
@@ -195,7 +194,7 @@ public class Matrix {
 				continue;
 			}
 			
-			det *= 1/reduced.MatrixValues[i][i];
+			det *= reduced.MatrixValues[i][i];
 			reduced.multiplyRowbyScalar(i,1/reduced.MatrixValues[i][i]);
 			
 			

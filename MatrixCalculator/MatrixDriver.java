@@ -1,5 +1,3 @@
-package chapter3;
-
 import java.io.*;
 import java.util.Scanner;
 
@@ -249,9 +247,11 @@ public class MatrixDriver {
 				}
 				
 			} else if(choice == 12){
+				input.nextLine();
+
 				System.out.println("What do you want to save the file as?");
-				String fileName = input.nextLine();
-				
+				String fileName = input.nextLine() + ".matrix";
+
 				multipleMatrices.writeToFile(new File(fileName));
 			} else {
 				System.out.println("Please choose a valid choice in the future if you want to"
